@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: todo-app
-        image: krishnasrm1423/todo-app:v1.0
+        image: krishnasrm1423/alpine
         ports:
         - containerPort: 5000
         readinessProbe:
