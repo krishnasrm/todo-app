@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alpine-app
+  labels:
+    app: alpine-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: alpine-app
+  template:
+    metadata:
+      labels:
+        app: alpine-app
+    spec:
+      containers:
+      - name: alpine
+        image: krishnasrm1423/alpine:latest
+        command: ["sh", "-c", "while true; do echo Alpine pod running on $(hostname); sleep 30; done"]
