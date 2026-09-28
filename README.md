@@ -5,7 +5,7 @@ with a fully automated CI/CD pipeline. Every push to GitHub automatically builds
 a Docker image, pushes it to Docker Hub with a versioned tag, and performs a
 zero-downtime rolling update on Kubernetes.
 
-//![Architecture](screenshots/architecture.png)
+#![Architecture](screenshots/architecture.png)
 
 ## Tech stack
 | Area | Tool |
