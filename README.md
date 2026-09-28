@@ -5,7 +5,7 @@ with a fully automated CI/CD pipeline. Every push to GitHub automatically builds
 a Docker image, pushes it to Docker Hub with a versioned tag, and performs a
 zero-downtime rolling update on Kubernetes.
 
-![Architecture](screenshots/architecture.png)
+//![Architecture](screenshots/architecture.png)
 
 ## Tech stack
 | Area | Tool |
@@ -87,16 +87,16 @@ pipeline {
 
 ## Screenshots
 ### Jenkins pipeline
-![Jenkins](screenshots/jenkins-pipeline.png)
+//![Jenkins](screenshots/jenkins-pipeline.png)
 
 ### Docker Hub versioned images
-![Docker Hub](screenshots/dockerhub-tags.png)
+//![Docker Hub](screenshots/dockerhub-tags.png)
 
 ### Kubernetes cluster
-![Pods](screenshots/kubectl-pods.png)
+//![Pods](screenshots/kubectl-pods.png)
 
 ### Live application
-![App](screenshots/app-output.png)
+//![App](screenshots/app-output.png)
 
 ## API endpoints
 | Method | Endpoint | Description |
@@ -107,18 +107,18 @@ pipeline {
 | POST | /todos | Add a todo: {"task": "learn devops"} |
 
 ## Run locally
-~~~bash
-docker build -t krishnasrm1423/todo-app:v1.0 .
-docker run -d -p 5000:5000 krishnasrm1423/todo-app:v1.0
-curl http://localhost:5000
-~~~
+//~~~bash
+//docker build -t krishnasrm1423/todo-app:v1.0 .
+//docker run -d -p 5000:5000 krishnasrm1423/todo-app:v1.0
+//curl http://localhost:5000
+//~~~
 
 ## Deploy manually to Kubernetes
-~~~bash
-kubectl apply -f k8s/deployment.yaml
-kubectl get pods -o wide
-curl http://<worker-node-ip>:30007
-~~~
+//~~~bash
+//kubectl apply -f k8s/deployment.yaml
+//kubectl get pods -o wide
+//curl http://<worker-node-ip>:30007
+//~~~
 
 ## Challenges faced and solutions
 | Problem | Cause | Solution |
